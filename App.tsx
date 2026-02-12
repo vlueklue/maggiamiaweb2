@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
 import { HowItWorks } from './components/HowItWorks';
@@ -7,6 +7,16 @@ import { Pricing } from './components/Pricing';
 import { Benefits } from './components/Benefits';
 import { Footer } from './components/Footer';
 import { AppLauncher } from './components/AppLauncher';
+import { Navbar } from './components/Navbar';
+
+const LandingPage: React.FC = () => (
+  <>
+    <Hero />
+    <HowItWorks />
+    <Features />
+    <Benefits />
+  </>
+);
 
 const App: React.FC = () => {
   return (
@@ -17,14 +27,14 @@ const App: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-300 rounded-full blur-[120px]" />
       </div>
 
+      <Navbar />
       <AppLauncher />
 
-      <main className="relative z-10">
-        <Hero />
-        <HowItWorks />
-        <Features />
-        <Benefits />
-        <Pricing />
+      <main className="relative z-10 pt-16">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/precios" element={<Pricing />} />
+        </Routes>
       </main>
 
       <Footer />
