@@ -28,9 +28,8 @@ const App: React.FC = () => {
       </div>
 
       <Navbar />
-      <AppLauncher />
 
-      <main className="relative z-10 pt-16">
+      <main className="relative z-10 pt-20">
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/precios" element={<Pricing />} />
