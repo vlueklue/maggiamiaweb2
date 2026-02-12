@@ -22,9 +22,9 @@ export const Pricing: React.FC = () => {
       sheets: 350,
       features: [
         "350 hojas para crear cuentos nuevos por mes",
+        "Todas las funciones del Plan Pro",
         "Acceso prioritario a nuevas funciones",
         "Soporte prioritario 24/7",
-        "Historias con animación",
         "Sin costo adicional por actualizaciones"
       ]
     }
